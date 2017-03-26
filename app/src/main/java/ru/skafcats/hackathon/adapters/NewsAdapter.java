@@ -1,4 +1,4 @@
-package vasidmi.ru.huawei;
+package ru.skafcats.hackathon.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.AppCompatImageView;
@@ -13,17 +13,22 @@ import com.squareup.picasso.Picasso;
 import java.util.Collections;
 import java.util.List;
 
+import ru.skafcats.hackathon.R;
+import ru.skafcats.hackathon.models.NewsArticle;
+
 /**
- * Created by vasidmi on 26/03/2017.
+ * Created by Василий on 26.03.17.
+ * <p>
+ * Возможно полное или частичное копирование
  */
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
 
-    List<NewsModel> mNews = Collections.emptyList();
+    List<NewsArticle> mNews = Collections.emptyList();
     private Context mContext;
 
-    public NewsAdapter(Context context,List<NewsModel> news){
+    public NewsAdapter(Context context,List<NewsArticle> news){
         this.mContext = context;
         this.mNews = news;
     }
@@ -33,7 +38,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
 
-        View newsView = inflater.inflate(R.layout.news_item, parent, false);
+        View newsView = inflater.inflate(R.layout.item_news, parent, false);
 
         ViewHolder viewHolder = new ViewHolder(newsView);
         return viewHolder;
@@ -41,7 +46,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        NewsModel news = mNews.get(position);
+        NewsArticle news = mNews.get(position);
         holder.title.setText(news.getTitle());
         Picasso.with(mContext).load(news.getURL()).into(holder.news_img);
     }

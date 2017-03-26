@@ -34,6 +34,8 @@ public class ThreadTask extends Thread {
             task.runInBackground(new IExecutor() {
                 @Override
                 public void onProgressNotify(int resultCode, Bundle data) {
+                    if (data == null)
+                        data = new Bundle();
                     data.putParcelable("task", finalTask);
                     resultReceiver.send(resultCode, data);
                 }

@@ -1,34 +1,40 @@
 package ru.skafcats.hackathon;
 
 import android.os.Bundle;
-import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
+import java.util.ArrayList;
+
+import ru.skafcats.hackathon.adapters.NewsAdapter;
 import ru.skafcats.hackathon.helpers.TaskHelper;
 import ru.skafcats.hackathon.interfaces.ITaskAnswerListener;
-import ru.skafcats.hackathon.tasks.TestTask;
+import ru.skafcats.hackathon.models.NewsArticle;
+import ru.skafcats.hackathon.tasks.LoadNewsTask;
 
 public class MainActivity extends AppCompatActivity implements ITaskAnswerListener {
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activty_news);
 
-        Button button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TaskHelper.addListener(MainActivity.this, new TestTask(), MainActivity.this);
-            }
-        });
+        recyclerView = (RecyclerView) findViewById(R.id.news_list);
+
+        TaskHelper.addListener(this, new LoadNewsTask(), this);
     }
 
     @Override
     public void onAnswer(Bundle data) {
-        Log.i("MainActivity", data.getInt("random") + " Выполнение в UI потоке: " + (Looper.myLooper() == Looper.getMainLooper()));
+        if (data != null) {
+            ArrayList<NewsArticle> news = data.getParcelableArrayList(LoadNewsTask.EXTRA_NEWS_LIST);
+            if (news != null) {
+                NewsAdapter mNewsAdapter = new NewsAdapter(MainActivity.this, news);
+                recyclerView.setAdapter(mNewsAdapter);
+                recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+            }
+        }
     }
 }
