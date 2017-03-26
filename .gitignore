@@ -26,4 +26,4 @@ proguard/
 # Android Studio captures folder
 captures/
 app/libs/
-app/src/main/res/drawable/
+app/src/main/res/

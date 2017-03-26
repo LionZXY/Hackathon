@@ -29,6 +29,6 @@ public class MainActivity extends AppCompatActivity implements ITaskAnswerListen
 
     @Override
     public void onAnswer(Bundle data) {
-        Log.i("MainActivity", "Выполнение в UI потоке: " + (Looper.myLooper() == Looper.getMainLooper()));
+        Log.i("MainActivity", data.getInt("random") + " Выполнение в UI потоке: " + (Looper.myLooper() == Looper.getMainLooper()));
     }
 }

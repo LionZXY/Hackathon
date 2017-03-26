@@ -34,9 +34,10 @@ public class MultiResultReciever extends ResultReceiver {
             ITask task = resultData.getParcelable("task");
             if (task != null) {
                 List<ITaskAnswerListener> taskAnswerListeners = taskListeners.get(task);
-                for (int i = 0; i < taskAnswerListeners.size(); i++)
-                    if (taskAnswerListeners.get(i) != null)
-                        taskAnswerListeners.get(i).onAnswer(resultData);
+                if (taskAnswerListeners != null)
+                    for (int i = 0; i < taskAnswerListeners.size(); i++)
+                        if (taskAnswerListeners.get(i) != null)
+                            taskAnswerListeners.get(i).onAnswer(resultData);
 
                 if (resultCode == CODE_RESULT_FINISH_TASK || resultCode == CODE_RESULT_ERROR_TASK)
                     taskListeners.remove(task);

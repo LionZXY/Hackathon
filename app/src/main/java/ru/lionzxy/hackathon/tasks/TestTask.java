@@ -5,6 +5,8 @@ import android.os.Looper;
 import android.os.Parcel;
 import android.util.Log;
 
+import java.util.Random;
+
 import ru.lionzxy.hackathon.enums.TaskType;
 import ru.lionzxy.hackathon.interfaces.IExecutor;
 import ru.lionzxy.hackathon.interfaces.ITask;
@@ -40,7 +42,15 @@ public class TestTask extends ITask {
     public void runInBackground(IExecutor executor) {
         Log.i(TAG, "Выполнение таска. В UI: " + (Looper.myLooper() == Looper.getMainLooper()));
 
-        executor.onProgressNotify(MultiResultReciever.CODE_RESULT_FINISH_TASK, new Bundle());
+        try {
+            Thread.sleep(60000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Random random = new Random();
+        Bundle bundle = new Bundle();
+        bundle.putInt("random", random.nextInt());
+        executor.onProgressNotify(MultiResultReciever.CODE_RESULT_FINISH_TASK, bundle);
     }
 
 
