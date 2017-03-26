@@ -1,4 +1,4 @@
-package ru.lionzxy.hackathon.enums;
+package ru.skafcats.hackathon.enums;
 
 /**
  * Created by lionzxy on 25.03.17.

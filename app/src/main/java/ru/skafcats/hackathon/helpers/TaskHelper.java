@@ -1,4 +1,4 @@
-package ru.lionzxy.hackathon.helpers;
+package ru.skafcats.hackathon.helpers;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,9 +8,9 @@ import android.util.Pair;
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.lionzxy.hackathon.interfaces.ITask;
-import ru.lionzxy.hackathon.interfaces.ITaskAnswerListener;
-import ru.lionzxy.hackathon.services.TaskExecutorService;
+import ru.skafcats.hackathon.interfaces.ITask;
+import ru.skafcats.hackathon.interfaces.ITaskAnswerListener;
+import ru.skafcats.hackathon.services.TaskExecutorService;
 
 /**
  * Created by lionzxy on 26.03.17.

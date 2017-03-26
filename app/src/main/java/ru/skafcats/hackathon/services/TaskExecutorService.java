@@ -1,4 +1,4 @@
-package ru.lionzxy.hackathon.services;
+package ru.skafcats.hackathon.services;
 
 import android.app.Service;
 import android.content.Intent;
@@ -11,10 +11,10 @@ import android.util.Pair;
 
 import java.util.HashMap;
 
-import ru.lionzxy.hackathon.enums.TaskType;
-import ru.lionzxy.hackathon.helpers.TaskHelper;
-import ru.lionzxy.hackathon.interfaces.ITask;
-import ru.lionzxy.hackathon.interfaces.ITaskAnswerListener;
+import ru.skafcats.hackathon.enums.TaskType;
+import ru.skafcats.hackathon.helpers.TaskHelper;
+import ru.skafcats.hackathon.interfaces.ITask;
+import ru.skafcats.hackathon.interfaces.ITaskAnswerListener;
 
 /**
  * Created by Nikita Kulikov on 25.03.17.

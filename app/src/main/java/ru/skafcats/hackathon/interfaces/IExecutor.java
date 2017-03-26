@@ -1,4 +1,4 @@
-package ru.lionzxy.hackathon.interfaces;
+package ru.skafcats.hackathon.interfaces;
 
 import android.os.Bundle;
 

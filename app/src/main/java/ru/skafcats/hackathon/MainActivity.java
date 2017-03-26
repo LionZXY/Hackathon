@@ -1,4 +1,4 @@
-package ru.lionzxy.hackathon;
+package ru.skafcats.hackathon;
 
 import android.os.Bundle;
 import android.os.Looper;
@@ -7,9 +7,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import ru.lionzxy.hackathon.helpers.TaskHelper;
-import ru.lionzxy.hackathon.interfaces.ITaskAnswerListener;
-import ru.lionzxy.hackathon.tasks.TestTask;
+import ru.skafcats.hackathon.helpers.TaskHelper;
+import ru.skafcats.hackathon.interfaces.ITaskAnswerListener;
+import ru.skafcats.hackathon.tasks.TestTask;
 
 public class MainActivity extends AppCompatActivity implements ITaskAnswerListener {
 

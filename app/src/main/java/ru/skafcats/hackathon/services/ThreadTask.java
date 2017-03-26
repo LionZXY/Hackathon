@@ -1,12 +1,12 @@
-package ru.lionzxy.hackathon.services;
+package ru.skafcats.hackathon.services;
 
 import android.os.Bundle;
 import android.util.Log;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import ru.lionzxy.hackathon.interfaces.IExecutor;
-import ru.lionzxy.hackathon.interfaces.ITask;
+import ru.skafcats.hackathon.interfaces.IExecutor;
+import ru.skafcats.hackathon.interfaces.ITask;
 
 /**
  * Created by lionzxy on 25.03.17.

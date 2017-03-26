@@ -1,4 +1,4 @@
-package ru.lionzxy.hackathon.services;
+package ru.skafcats.hackathon.services;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import ru.lionzxy.hackathon.interfaces.ITask;
-import ru.lionzxy.hackathon.interfaces.ITaskAnswerListener;
+import ru.skafcats.hackathon.interfaces.ITask;
+import ru.skafcats.hackathon.interfaces.ITaskAnswerListener;
 
 /**
  * Created by Nikita Kulikov on 26.03.17.

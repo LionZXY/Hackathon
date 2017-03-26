@@ -1,4 +1,4 @@
-package ru.lionzxy.hackathon;
+package ru.skafcats.hackathon;
 
 import org.junit.Test;
 

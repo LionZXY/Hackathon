@@ -1,4 +1,4 @@
-package ru.lionzxy.hackathon.tasks;
+package ru.skafcats.hackathon.tasks;
 
 import android.os.Bundle;
 import android.os.Looper;
@@ -7,10 +7,10 @@ import android.util.Log;
 
 import java.util.Random;
 
-import ru.lionzxy.hackathon.enums.TaskType;
-import ru.lionzxy.hackathon.interfaces.IExecutor;
-import ru.lionzxy.hackathon.interfaces.ITask;
-import ru.lionzxy.hackathon.services.MultiResultReciever;
+import ru.skafcats.hackathon.enums.TaskType;
+import ru.skafcats.hackathon.interfaces.IExecutor;
+import ru.skafcats.hackathon.interfaces.ITask;
+import ru.skafcats.hackathon.services.MultiResultReciever;
 
 /**
  * Created by lionzxy on 26.03.17.
@@ -21,16 +21,11 @@ public class TestTask extends ITask {
     public static final String TAG = "TestTask";
 
     public TestTask() {
-        super(TaskType.NETWORK_TASK);
+        super(TaskType.NETWORK_TASK, 10);
     }
 
     public TestTask(Parcel in) {
-        super(TaskType.NETWORK_TASK);
-    }
-
-    @Override
-    public int hashCode() {
-        return 10;
+        super(TaskType.NETWORK_TASK, 10);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package ru.lionzxy.hackathon;
+package ru.skafcats.hackathon;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
