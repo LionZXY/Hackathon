@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity implements ITaskAnswerListen
         recyclerView = (RecyclerView) findViewById(R.id.news_list);
 
         TaskHelper.addListener(this, new LoadNewsTask(), this);
-
         /*MailReport mailReport = new MailReport("Test", "Это тест");
         mailReport.setMailFrom("nikita@mg.lionzxy.ru");
         mailReport.setMailTo("nikita@kulikof.ru");

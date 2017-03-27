@@ -7,7 +7,7 @@
 
         android:id="@+id/news_item"
         android:layout_width="match_parent"
-        android:layout_height="155dp"
+        android:layout_height="400dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="15dp"
@@ -18,27 +18,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/news_item_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                android:text="Новый флагман HUAWEI P10 – слияние технологий и дизайна" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="35dp">
+                android:text="Новый флагман HUAWEI P10 – слияние технологий и дизайна"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <android.support.v7.widget.AppCompatImageView
                 android:id="@+id/news_item_image"
-                android:layout_width="185dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="3dp"
-                android:paddingTop="3dp"/>
+                android:layout_above="@+id/new_item_get_more_btn"
+                android:layout_below="@+id/news_item_title" />
 
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/new_item_get_more_btn"
