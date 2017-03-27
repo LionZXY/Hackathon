@@ -28,7 +28,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     List<NewsArticle> mNews = Collections.emptyList();
     private Context mContext;
 
-    public NewsAdapter(Context context,List<NewsArticle> news){
+    public NewsAdapter(Context context, List<NewsArticle> news) {
         this.mContext = context;
         this.mNews = news;
     }

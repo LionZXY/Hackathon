@@ -4,17 +4,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 
 import java.util.ArrayList;
 
 import ru.skafcats.hackathon.adapters.NewsAdapter;
 import ru.skafcats.hackathon.helpers.TaskHelper;
 import ru.skafcats.hackathon.interfaces.ITaskAnswerListener;
-import ru.skafcats.hackathon.models.MailReport;
 import ru.skafcats.hackathon.models.NewsArticle;
 import ru.skafcats.hackathon.tasks.LoadNewsTask;
-import ru.skafcats.hackathon.tasks.MailSendTask;
 
 public class MainActivity extends AppCompatActivity implements ITaskAnswerListener {
     RecyclerView recyclerView;
