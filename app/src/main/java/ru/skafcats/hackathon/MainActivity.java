@@ -4,14 +4,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import java.util.ArrayList;
 
 import ru.skafcats.hackathon.adapters.NewsAdapter;
 import ru.skafcats.hackathon.helpers.TaskHelper;
 import ru.skafcats.hackathon.interfaces.ITaskAnswerListener;
+import ru.skafcats.hackathon.models.MailReport;
 import ru.skafcats.hackathon.models.NewsArticle;
 import ru.skafcats.hackathon.tasks.LoadNewsTask;
+import ru.skafcats.hackathon.tasks.MailSendTask;
 
 public class MainActivity extends AppCompatActivity implements ITaskAnswerListener {
     RecyclerView recyclerView;
@@ -24,6 +27,19 @@ public class MainActivity extends AppCompatActivity implements ITaskAnswerListen
         recyclerView = (RecyclerView) findViewById(R.id.news_list);
 
         TaskHelper.addListener(this, new LoadNewsTask(), this);
+
+        /*MailReport mailReport = new MailReport("Test", "Это тест");
+        mailReport.setMailFrom("nikita@mg.lionzxy.ru");
+        mailReport.setMailTo("nikita@kulikof.ru");
+        MailSendTask mailSendTask = new MailSendTask(mailReport);
+        TaskHelper.addListener(this, mailSendTask, new ITaskAnswerListener() {
+            @Override
+            public void onAnswer(Bundle data) {
+                if (data != null) {
+                    Log.d("Test", data.getString(MailSendTask.STAGE_PROGRESS_NOTIFY, "Ничего тут нет"));
+                }
+            }
+        });*/
     }
 
     @Override
