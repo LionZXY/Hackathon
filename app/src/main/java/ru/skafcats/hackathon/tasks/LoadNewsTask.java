@@ -45,9 +45,10 @@ public class LoadNewsTask extends ITask {
 //            Document doc = Jsoup.connect("http://consumer.huawei.com/ru/press/news/index-1.htm#anchor").get();
 //            Elements elements_titles = doc.select("div[class=\"left\"] img");
             Document doc = Jsoup.connect("https://4huawei.ru/news/").get();
-            Elements data = doc.select("section[class=\"recent-posts\"] div[class=\"post-thumb\"] a img");
-            for (int i = 0; i < data.size(); i++) {
-                news.add(new NewsArticle(data.get(i).attr("alt"), data.get(i).attr("src")));
+            Elements news_list = doc.select("section[class=\"recent-posts\"] div[class=\"post-thumb\"] a img");
+            Elements news_date = doc.select("section[class=\"recent-posts\"] section[class=\"entry-body\"] span[class=\"entry-date\"]");
+            for (int i = 0; i < news_list.size(); i++) {
+                news.add(new NewsArticle(news_list.get(i).attr("alt"), news_list.get(i).attr("src"), news_date.get(i).text()));
             }
             Bundle bundle = new Bundle();
             bundle.putParcelableArrayList(EXTRA_NEWS_LIST, news);

@@ -41,6 +41,34 @@
                 android:layout_above="@+id/new_item_get_more_btn"
                 android:layout_below="@+id/news_item_title" />
 
+            <ProgressBar
+                android:id="@+id/news_item_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="invisible" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/news_date_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/news_item_title"
+                android:layout_alignStart="@+id/news_item_title"
+                android:layout_below="@+id/news_item_image"
+                android:layout_marginTop="9dp"
+                app:srcCompat="@mipmap/ic_date_range_black_24dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/news_item_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/news_date_icon"
+                android:layout_marginBottom="2dp"
+                android:layout_toEndOf="@+id/news_date_icon"
+                android:layout_toRightOf="@+id/news_date_icon"
+                android:text="28.03.2017" />
+
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/new_item_get_more_btn"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"

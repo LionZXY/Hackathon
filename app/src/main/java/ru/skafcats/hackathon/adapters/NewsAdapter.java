@@ -7,7 +7,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.Collections;
@@ -45,10 +47,22 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, int position) {
         NewsArticle news = mNews.get(position);
+        holder.news_progress.setVisibility(View.VISIBLE);
         holder.title.setText(news.getTitle());
-        Picasso.with(mContext).load(news.getURL()).into(holder.news_img);
+        holder.news_date.setText(news.getDate());
+        Picasso.with(mContext).load(news.getURL()).into(holder.news_img, new Callback() {
+            @Override
+            public void onSuccess() {
+                holder.news_progress.setVisibility(View.INVISIBLE);
+            }
+
+            @Override
+            public void onError() {
+
+            }
+        });
     }
 
     @Override
@@ -59,11 +73,15 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     class ViewHolder extends RecyclerView.ViewHolder {
         AppCompatTextView title;
         AppCompatImageView news_img;
+        AppCompatTextView news_date;
+        ProgressBar news_progress;
 
         public ViewHolder(View itemView) {
             super(itemView);
             title = (AppCompatTextView) itemView.findViewById(R.id.news_item_title);
             news_img = (AppCompatImageView) itemView.findViewById(R.id.news_item_image);
+            news_date = (AppCompatTextView) itemView.findViewById(R.id.news_item_date);
+            news_progress = (ProgressBar) itemView.findViewById(R.id.news_item_progress);
         }
     }
 

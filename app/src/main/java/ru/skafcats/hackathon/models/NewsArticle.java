@@ -20,15 +20,18 @@ import ru.skafcats.hackathon.tasks.ImageLoader;
 public class NewsArticle implements Parcelable {
     private String title;
     private String img_url;
+    private String date;
 
-    public NewsArticle(String title, String img_url) {
+    public NewsArticle(String title, String img_url, String date) {
         this.title = title;
         this.img_url = img_url;
+        this.date = date;
     }
 
     public NewsArticle(Parcel in) {
         title = in.readString();
         img_url = in.readString();
+        date = in.readString();
     }
 
     public String getTitle() {
@@ -37,6 +40,10 @@ public class NewsArticle implements Parcelable {
 
     public String getURL() {
         return img_url;
+    }
+
+    public String getDate() {
+        return date;
     }
 
     @Override
@@ -48,6 +55,7 @@ public class NewsArticle implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(title);
         dest.writeString(img_url);
+        dest.writeString(date);
     }
 
     public void loadImage(final ImageView imageView) {
