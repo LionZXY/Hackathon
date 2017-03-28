@@ -1,8 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_gradient"
     android:orientation="vertical">
 
-</LinearLayout>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/auth_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/huawei_logo" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/auth_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/auth_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Авторизация"
+        android:textColor="#ffff"
+        android:textSize="40sp" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/login_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/auth_text"
+        android:layout_alignLeft="@+id/auth_text"
+        android:layout_alignRight="@+id/auth_text"
+        android:layout_alignStart="@+id/auth_text"
+        android:layout_below="@+id/auth_text"
+        android:layout_marginTop="30dp"
+        android:hint="Имя пользователя"
+        android:textColorHint="#ffff" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/login_text"
+        android:layout_alignLeft="@+id/login_text"
+        android:layout_alignRight="@+id/login_text"
+        android:layout_alignStart="@+id/login_text"
+        android:layout_below="@+id/login_text"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:textColorHint="#ffff" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/password_text"
+        android:layout_alignLeft="@+id/password_text"
+        android:layout_alignRight="@+id/password_text"
+        android:layout_alignStart="@+id/password_text"
+        android:layout_below="@+id/password_text"
+        android:layout_marginTop="10dp"
+        android:text="Войти" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/register_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/login_btn"
+        android:layout_alignLeft="@+id/login_btn"
+        android:layout_alignRight="@+id/login_btn"
+        android:layout_alignStart="@+id/login_btn"
+        android:layout_below="@+id/login_btn"
+        android:layout_marginTop="10dp"
+        android:text="Регистрация" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/login_vk_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_btn"
+        android:layout_toLeftOf="@+id/auth_logo"
+        android:layout_toStartOf="@+id/auth_logo"
+        android:src="@drawable/vk_logo" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/login_twitter_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_btn"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/login_vk_btn"
+        android:src="@drawable/twitter_logo" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/login_facebook_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_btn"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/login_twitter_btn"
+        android:src="@drawable/facebook_logo" />
+
+</RelativeLayout>
