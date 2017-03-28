@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Hackathon</string>
+    <string name="report_check_text">Перед отправкой отчета необходимо проверить данные устройства, которые приложаться к отчету. Пожалуйста, проверьте нижеприведенную информацию:</string>
 </resources>

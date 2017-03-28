@@ -23,7 +23,7 @@
         android:layout_marginTop="20dp"
         android:text="Авторизация"
         android:textColor="#ffff"
-        android:textSize="40sp" />
+        android:textSize="30sp" />
 
     <android.support.v7.widget.AppCompatEditText
         android:id="@+id/login_text"
@@ -60,7 +60,7 @@
         android:layout_alignRight="@+id/password_text"
         android:layout_alignStart="@+id/password_text"
         android:layout_below="@+id/password_text"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:text="Войти" />
 
     <android.support.v7.widget.AppCompatButton
@@ -72,7 +72,8 @@
         android:layout_alignRight="@+id/login_btn"
         android:layout_alignStart="@+id/login_btn"
         android:layout_below="@+id/login_btn"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="5dp"
         android:text="Регистрация" />
 
     <android.support.v7.widget.AppCompatImageView

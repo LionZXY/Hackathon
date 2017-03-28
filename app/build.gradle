@@ -19,8 +19,16 @@ android {
     }
 }
 
+repositories {
+    maven {
+        url  "http://dl.bintray.com/lukaville/maven"
+    }
+}
+
 dependencies {
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    compile 'com.nbsp:library:1.2'
+
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {

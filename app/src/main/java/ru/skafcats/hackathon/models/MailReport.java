@@ -72,6 +72,7 @@ public class MailReport implements Parcelable {
     public boolean addAttachment(File file) {
         try {
             if (file != null && file.exists() && file.isFile() && file.length() < MAX_BYTES) {
+                attachment.add(file);
                 return true;
             }
         } catch (Exception e) {
@@ -80,7 +81,7 @@ public class MailReport implements Parcelable {
         return false;
     }
 
-    public List<File> getAttachment() {
+    public ArrayList<File> getAttachment() {
         return attachment;
     }
 

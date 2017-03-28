@@ -2,9 +2,9 @@ package ru.skafcats.hackathon.navigation;
 
 import android.app.Activity;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Toast;
 
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
@@ -17,6 +17,7 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
+import ru.skafcats.hackathon.MailReportInputActivity;
 import ru.skafcats.hackathon.R;
 
 /**
@@ -26,7 +27,7 @@ import ru.skafcats.hackathon.R;
 public class NavigationDrawer {
 
 
-    PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Новости");
+    PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Отчеты");
     SecondaryDrawerItem item2 = new SecondaryDrawerItem().withIdentifier(2).withName("Тест");
     AccountHeader headerResult;
     Drawer mDrawer;
@@ -37,7 +38,7 @@ public class NavigationDrawer {
                 .withActivity(activity)
                 .withHeaderBackground(R.drawable.background_drawer)
                 .addProfiles(
-                        new ProfileDrawerItem().withName("Никита Куликов").withEmail("test@gmail.com").withIcon(activity.getResources().getResourceName(R.drawable.huawei_logo))
+                        new ProfileDrawerItem().withName("Никита Куликов").withEmail("test@gmail.com").withIcon(R.drawable.default_avatar)
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
@@ -60,7 +61,8 @@ public class NavigationDrawer {
 
                         switch ((int) drawerItem.getIdentifier()) {
                             case 1:
-                                Toast.makeText(activity.getApplicationContext(), "Works!", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(view.getContext(), MailReportInputActivity.class);
+                                view.getContext().startActivity(intent);
                                 mDrawer.closeDrawer();
                                 break;
                         }

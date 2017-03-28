@@ -51,7 +51,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         NewsArticle news = mNews.get(position);
         holder.news_progress.setVisibility(View.VISIBLE);
         holder.title.setText(news.getTitle());
-        holder.news_date.setText(news.getDate());
         Picasso.with(mContext).load(news.getURL()).into(holder.news_img, new Callback() {
             @Override
             public void onSuccess() {
@@ -80,7 +79,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
             super(itemView);
             title = (AppCompatTextView) itemView.findViewById(R.id.news_item_title);
             news_img = (AppCompatImageView) itemView.findViewById(R.id.news_item_image);
-            news_date = (AppCompatTextView) itemView.findViewById(R.id.news_item_date);
             news_progress = (ProgressBar) itemView.findViewById(R.id.news_item_progress);
         }
     }

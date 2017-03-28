@@ -1,4 +1,4 @@
-package ru.skafcats.hackathon.Fragments;
+package ru.skafcats.hackathon.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
