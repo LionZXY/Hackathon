@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_gradient"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/auth_logo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/huawei_logo" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/auth_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Регистрация"
+                android:textColor="#ffff"
+                android:textSize="30sp" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/name_text"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:hint="Имя"
+                android:textColorHint="#ffff" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/surname_text"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Фамилия"
+                android:textColorHint="#ffff" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/login_text"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Имя пользователя"
+                android:textColorHint="#ffff" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/password_text"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Пароль"
+                android:inputType="textPassword"
+                android:textColorHint="#ffff" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/password_repeat_text"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Повторите пароль"
+                android:inputType="textPassword"
+                android:textColorHint="#ffff" />
+
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/phone_text"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:inputType="phone"
+                android:hint="Введите телефон"
+                android:textColorHint="#ffff" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/model_text"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Модель телефона"
+                android:textColorHint="#ffff" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/register_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="0dp"
+                android:text="Регистрация" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/login_vk_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vk_logo" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/login_twitter_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:src="@drawable/twitter_logo" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/login_facebook_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:src="@drawable/facebook_logo" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

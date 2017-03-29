@@ -7,7 +7,6 @@ import android.util.Log;
 import java.io.File;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Nikita Kulikov on 27.03.17.
@@ -27,10 +26,22 @@ public class MailReport implements Parcelable {
     private ArrayList<File> attachment = new ArrayList<>();
 
     public MailReport(String title, String text) {
+        if (title == null)
+            title = "NULL";
+        if (text == null)
+            text = "NULL";
+
         this.title = title;
         this.text = text;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
 
     public boolean setMailTo(String to) {
         if (to != null && to.length() > 0) {

@@ -50,8 +50,8 @@ public class AttachmentAdapter extends RecyclerView.Adapter<AttachmentAdapter.Vi
 
     @Override
     public void onBindViewHolder(final AttachmentAdapter.ViewHolder holder, int position) {
-        if (position < mailReport.getAttachment().size()) {
-            File file = mailReport.getAttachment().get(position);
+        if (position != 0) {
+            File file = mailReport.getAttachment().get(position - 1);
             if (FileHelper.isImage(file)) {
                 holder.imageAdd.setVisibility(View.GONE);
                 holder.attachmentFile.setVisibility(View.GONE);

@@ -18,6 +18,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".MailReportInputActivity" />
+        <activity android:name=".MailReportSenderActivity" />
+        <activity android:name=".MailReportCheckActivity" />
+
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegistryActivity" />
 
         <service android:name="ru.skafcats.hackathon.services.TaskExecutorService" />
     </application>

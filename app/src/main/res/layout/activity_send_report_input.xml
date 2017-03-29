@@ -6,7 +6,7 @@
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
+        layout="@layout/toolbar_next_step" />
 
     <ScrollView
         android:layout_margin="10dp"
@@ -19,12 +19,14 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Ваш вопрос"
                 android:lines="1" />
 
             <EditText
+                android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -35,14 +37,18 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/attachment_list"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:orientation="horizontal">
-            </android.support.v7.widget.RecyclerView>
+                android:layout_height="75dp"
+                android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Добавить архив /var/logs (Только для Root-пользователей)" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Отправить информацию о текущем устройстве" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

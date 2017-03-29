@@ -5,10 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import ru.skafcats.hackathon.adapters.NewsAdapter;
+import ru.skafcats.hackathon.helpers.PreferenceHelper;
 import ru.skafcats.hackathon.helpers.TaskHelper;
 import ru.skafcats.hackathon.interfaces.ITaskAnswerListener;
 import ru.skafcats.hackathon.models.NewsArticle;
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements ITaskAnswerListen
         mNavigationDrawer = new NavigationDrawer(this, mToolbar);
         recyclerView = (RecyclerView) findViewById(R.id.news_list);
         TaskHelper.addListener(this, new LoadNewsTask(), this);
+        getSupportActionBar().setTitle("Новости");
 
         /*MailReport mailReport = new MailReport("Test", "Это тест");
         mailReport.setMailFrom("nikita@mg.lionzxy.ru");
